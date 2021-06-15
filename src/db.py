@@ -3,17 +3,12 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
 Base = declarative_base()
+RDB_PATH = 'sqlite:///db.sqlite3'
 ECHO_LOG = True
 
-DATABASE = 'mysql:///python:python:mysql:python'
-
-# DBとの接続
 engine = create_engine(
-    DATABASE,
-    encoding="utf-8",
-    echo=True
+    RDB_PATH, echo=ECHO_LOG
 )
 
-# Sessionの作成
 Session = sessionmaker(bind=engine)
 session = Session()
