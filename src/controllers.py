@@ -14,3 +14,10 @@ jinja_env = templates.env
 
 def index(request: Request):
     return templates.TemplateResponse('index.html', {'request': request})
+
+
+def admin(request: Request):
+    return templates.TemplateResponse('admin.html', {
+        'request': request,
+        'username': 'admin'
+    })
