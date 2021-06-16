@@ -5,7 +5,7 @@ from datetime import datetime
 class MyCalendar(calendar.LocaleHTMLCalendar):
     def __init__(self, username, linked_date: dict):
         calendar.LocaleHTMLCalendar.__init__(
-            self, firstweekday=6, locale='ja_jp')
+            self, firstweekday=6, locale='ja_JP')
 
         self.username = username
         self.linked_date = linked_date

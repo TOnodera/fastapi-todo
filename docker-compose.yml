@@ -4,6 +4,8 @@ services:
         build: ./docker/python
         environment:
             - TZ=${TZ}
+            - LC_ALL=${LC_ALL}
+            - LANG=${LANG}
         volumes: 
             - ./:/home/python/workspace
     mysql:
